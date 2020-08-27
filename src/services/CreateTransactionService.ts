@@ -1,7 +1,7 @@
 import { getRepository, getCustomRepository } from 'typeorm';
 
 import AppError from '../errors/AppError';
-import TransactionRepository from '../repositories/TransactionsRepository';
+import TransactionsRepository from '../repositories/TransactionsRepository';
 
 import Transaction from '../models/Transaction';
 import Category from '../models/Category';
@@ -23,7 +23,9 @@ class CreateTransactionService {
     const categoryRepository = getRepository(Category);
 
     if (type === 'outcome') {
-      const transactionsRepository = getCustomRepository(TransactionRepository);
+      const transactionsRepository = getCustomRepository(
+        TransactionsRepository,
+      );
       const balance = await transactionsRepository.getBalance();
 
       if (value > Number(balance.total))
