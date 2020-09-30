@@ -14,7 +14,7 @@ The project was developed using the following technologies
 - [NodeJS](https://nodejs.org/en/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Docker](https://www.docker.com/)
-- [Postgers (TypeORM)](https://typeorm.io/#/)
+- [Postgres (TypeORM)](https://typeorm.io/#/)
 
 ## :fire: How to run
 
